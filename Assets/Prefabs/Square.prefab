@@ -122,5 +122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   squareName: null
-  deaultMaterial: {fileID: 0}
+  defaultMaterial: {fileID: 0}
   selectedMaterial: {fileID: 2100000, guid: 9026cda985a7d654580daf17a4217491, type: 2}
+  eatMaterial: {fileID: 2100000, guid: 33eb39df2b15f0d41a155bc9d9262741, type: 2}
+  meshRenderer: {fileID: 5516669197843044954}
+  pice: {fileID: 0}
+  piceToMove: {fileID: 0}

@@ -2,31 +2,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Pice : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class Pice : MonoBehaviour
 {
     public Material defaultMaterial, selectedMaterial;
     public EColorType color;
-    MeshRenderer meshRenderer;
+    public EPiceType piceType = EPiceType.Null;
+    public List<Square> selectedSquares = new List<Square>();
 
-    public void InstantiatePice(EColorType color, Material material)
+    protected MeshRenderer meshRenderer;
+    protected Board board;
+
+    private void Start()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+        board = FindAnyObjectByType<Board>();
+    }
+
+    public void InstantiatePice(EColorType color, Material material, EPiceType piceType)
     {
         this.color = color;
         defaultMaterial = material;
+        this.piceType = piceType;
         GetComponent<MeshRenderer>().material = defaultMaterial;
+    }
+
+    public bool CheckCanEat(Square square)
+    {
+        if (square.pice != null)
+            if (square.pice.color != this.color)
+                return true;
+        return false;
+    }
+
+    public void DeselectSquares()
+    {
+        foreach (Square square in selectedSquares)
+            square.Deselect();
     }
 
     public void CanBeSelected(bool canBeSelected)
     {
         GetComponent<Collider>().enabled = canBeSelected ? true : false;
     }
-    private void Start()
-    {
-        meshRenderer = GetComponent<MeshRenderer>();
-    }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public virtual void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Click");
+        Debug.Log("Not Implemented Click");
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -38,4 +59,9 @@ public class Pice : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     {
         meshRenderer.material = defaultMaterial;
     }
+}
+
+public enum EPiceType
+{
+    Null, King, Knight, Pawn, Pishop, Queen, Rook
 }

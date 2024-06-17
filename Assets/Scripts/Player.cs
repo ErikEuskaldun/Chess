@@ -6,15 +6,13 @@ public class Player : MonoBehaviour
     public EColorType color;
     public Material material;
     public List<Pice> pices = new List<Pice>();
-    void Start()
-    {
-        
-    }
+    [SerializeField] Board board;
 
-    public void AddPice(Pice pice)
+    public void AddPice(Pice pice, EPiceType piceType)
     {
-        pice.InstantiatePice(color, material);
+        pice.InstantiatePice(color, material, piceType);
         pices.Add(pice);
+        board.GetSquare((int)pice.transform.position.x, (int)pice.transform.position.z).pice = pice;
     }
 
     public void IsPlayerTurn(bool isPlayerTurn)

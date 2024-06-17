@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 216010717531216659}
   - component: {fileID: 5529761193971965440}
   - component: {fileID: 8219764523029765530}
-  - component: {fileID: -8986112603095415031}
   - component: {fileID: 3137980340746216095}
+  - component: {fileID: -2978138740658676881}
   m_Layer: 0
   m_Name: PawnLow
   m_TagString: Untagged
@@ -88,20 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-8986112603095415031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2391799383376356848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3947f1947427c5444878e11c0a1875cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
-  selectedMaterial: {fileID: 2100000, guid: 9026cda985a7d654580daf17a4217491, type: 2}
 --- !u!64 &3137980340746216095
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -124,3 +110,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 3e6e2bab394446a44b13867733a158ae, type: 3}
+--- !u!114 &-2978138740658676881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2391799383376356848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e481e8513ae15840b97c039427a202f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 0}
+  selectedMaterial: {fileID: 2100000, guid: 9026cda985a7d654580daf17a4217491, type: 2}
+  color: 0

@@ -170,6 +170,7 @@ MonoBehaviour:
   color: 1
   material: {fileID: 2100000, guid: e6047e58e8afacf4eb7eaa5c181edc4f, type: 2}
   pices: []
+  board: {fileID: 937574981}
 --- !u!1 &133582839
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +818,7 @@ MonoBehaviour:
   color: 2
   material: {fileID: 2100000, guid: 2a4606efd2ca2a44b80fc652182e6e40, type: 2}
   pices: []
+  board: {fileID: 937574981}
 --- !u!1001 &3181033272290136266
 PrefabInstance:
   m_ObjectHideFlags: 0
