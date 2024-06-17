@@ -24,12 +24,12 @@ public class Square : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPo
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        meshRenderer.material = selectedMaterial;
+        //meshRenderer.material = selectedMaterial;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        meshRenderer.material = defaultMaterial;
+        //meshRenderer.material = defaultMaterial;
     }
 
     public void OnPointerUp(PointerEventData eventData)

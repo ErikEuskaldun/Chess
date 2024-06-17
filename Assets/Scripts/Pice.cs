@@ -1,11 +1,24 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Pice : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Material defaultMaterial, selectedMaterial;
+    public EColorType color;
     MeshRenderer meshRenderer;
 
+    public void InstantiatePice(EColorType color, Material material)
+    {
+        this.color = color;
+        defaultMaterial = material;
+        GetComponent<MeshRenderer>().material = defaultMaterial;
+    }
+
+    public void CanBeSelected(bool canBeSelected)
+    {
+        GetComponent<Collider>().enabled = canBeSelected ? true : false;
+    }
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
